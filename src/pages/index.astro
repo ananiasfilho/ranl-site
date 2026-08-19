@@ -6,7 +6,6 @@ const EMPRESA = {
   cidade: "São Paulo",
   estado: "SP",
   cep: "01310-914",
-  contato: "contato@ranl.com.br",
 };
 
 const titulo = "RANL — Serviços de Gestão e Tecnologia Empresarial";
@@ -32,9 +31,9 @@ const descricao =
 
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f766e'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c2410c'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E"
     />
-    <meta name="theme-color" content="#0f766e" />
+    <meta name="theme-color" content="#c2410c" />
 
     <script
       type="application/ld+json"
@@ -45,7 +44,6 @@ const descricao =
         legalName: EMPRESA.razaoSocial,
         taxID: EMPRESA.cnpj,
         url: "https://ranl.com.br",
-        email: EMPRESA.contato,
         areaServed: "BR",
         address: {
           "@type": "PostalAddress",
@@ -65,7 +63,7 @@ const descricao =
         <span class="marca-icone">R</span>
         <span>RANL</span>
       </a>
-      <a class="botao botao-fino" href={`mailto:${EMPRESA.contato}`}>Falar com a gente</a>
+      <a class="botao botao-fino" href="#contato">Falar com a gente</a>
     </header>
 
     <main>
@@ -78,7 +76,7 @@ const descricao =
           parado e alguém do outro lado quando algo trava.
         </p>
         <div class="acoes">
-          <a class="botao" href={`mailto:${EMPRESA.contato}`}>Conversar sobre o seu projeto</a>
+          <a class="botao" href="#contato">Conversar sobre o seu projeto</a>
         </div>
       </section>
 
@@ -132,14 +130,14 @@ const descricao =
         </p>
       </section>
 
-      <section class="contato">
+      <section class="contato" id="contato">
         <h2>Vamos conversar</h2>
         <p>
           Escreva contando o que a sua empresa precisa — trocar um sistema, arrumar a
           infraestrutura, automatizar um processo, ou só ter alguém de confiança para chamar. A
           resposta vem no mesmo dia útil.
         </p>
-        <a class="botao" href={`mailto:${EMPRESA.contato}`}>{EMPRESA.contato}</a>
+
       </section>
     </main>
 
@@ -154,14 +152,14 @@ const descricao =
 
     <style is:global>
       :root {
-        --tinta: #10202a;
-        --tinta-suave: #4b6472;
-        --tinta-fraca: #8aa0ac;
-        --linha: #dfe9ee;
+        --tinta: #241a14;
+        --tinta-suave: #6b5546;
+        --tinta-fraca: #a4907f;
+        --linha: #ecdfd3;
         --papel: #ffffff;
-        --fundo: #f6fafb;
-        --verde: #0f766e;
-        --azul: #0284c7;
+        --fundo: #fdfaf7;
+        --laranja: #c2410c;
+        --marrom: #7c2d12;
         --largura: 1000px;
       }
 
@@ -185,9 +183,9 @@ const descricao =
         inset: 0;
         z-index: -1;
         background:
-          radial-gradient(at 0% 0%, rgba(15, 118, 110, 0.14), transparent 55%),
-          radial-gradient(at 100% 8%, rgba(2, 132, 199, 0.12), transparent 55%),
-          linear-gradient(135deg, #ecfeff, #f0fdfa 50%, #eff6ff);
+          radial-gradient(at 0% 0%, rgba(194, 65, 12, 0.13), transparent 55%),
+          radial-gradient(at 100% 8%, rgba(124, 45, 18, 0.1), transparent 55%),
+          linear-gradient(135deg, #fff7ed, #fefaf6 50%, #fdf6f0);
       }
 
       a {
@@ -220,7 +218,7 @@ const descricao =
         width: 32px;
         height: 32px;
         border-radius: 9px;
-        background: linear-gradient(135deg, var(--verde), var(--azul));
+        background: linear-gradient(135deg, var(--laranja), var(--marrom));
         color: #fff;
         font-size: 16px;
       }
@@ -231,12 +229,12 @@ const descricao =
         justify-content: center;
         padding: 14px 26px;
         border-radius: 999px;
-        background: linear-gradient(135deg, var(--verde), var(--azul));
+        background: linear-gradient(135deg, var(--laranja), var(--marrom));
         color: #fff !important;
         font-weight: 600;
         font-size: 15.5px;
         text-decoration: none;
-        box-shadow: 0 10px 24px -10px rgba(2, 132, 199, 0.8);
+        box-shadow: 0 10px 24px -10px rgba(124, 45, 18, 0.55);
       }
 
       .botao:hover {
