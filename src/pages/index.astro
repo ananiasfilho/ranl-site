@@ -1,0 +1,338 @@
+---
+const EMPRESA = {
+  razaoSocial: "RANL Serviços Administrativos Ltda",
+  cnpj: "53.176.679/0001-30",
+  endereco: "Avenida Paulista, 1106, sala 01, andar 16, Bela Vista",
+  cidade: "São Paulo",
+  estado: "SP",
+  cep: "01310-914",
+  contato: "contato@ranl.com.br",
+};
+
+const titulo = "RANL — implantação de ERP que termina";
+const descricao =
+  "Consultoria de implantação de ERP com foco em Odoo: levantamento, configuração, migração de dados e a operação rodando de verdade no fim.";
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{titulo}</title>
+    <meta name="description" content={descricao} />
+    <link rel="canonical" href="https://ranl.com.br/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="RANL" />
+    <meta property="og:title" content={titulo} />
+    <meta property="og:description" content={descricao} />
+    <meta property="og:url" content="https://ranl.com.br/" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f766e'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='16' font-weight='700' fill='white' text-anchor='middle'%3ER%3C/text%3E%3C/svg%3E"
+    />
+    <meta name="theme-color" content="#0f766e" />
+
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        name: "RANL",
+        legalName: EMPRESA.razaoSocial,
+        taxID: EMPRESA.cnpj,
+        url: "https://ranl.com.br",
+        email: EMPRESA.contato,
+        areaServed: "BR",
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: EMPRESA.endereco,
+          addressLocality: EMPRESA.cidade,
+          addressRegion: EMPRESA.estado,
+          postalCode: EMPRESA.cep,
+          addressCountry: "BR",
+        },
+      })}
+    />
+  </head>
+
+  <body>
+    <header class="topo">
+      <a class="marca" href="/">
+        <span class="marca-icone">R</span>
+        <span>RANL</span>
+      </a>
+      <a class="botao botao-fino" href={`mailto:${EMPRESA.contato}`}>Falar com a gente</a>
+    </header>
+
+    <main>
+      <section class="capa">
+        <p class="olho">Implantação de ERP</p>
+        <h1>Sistema implantado é sistema que a equipe usa na segunda-feira.</h1>
+        <p class="linha-fina">
+          A RANL entra em projeto de ERP para levá-lo até a operação rodando: levantamento do
+          processo como ele é de fato, configuração, migração dos dados, treino de quem vai usar e
+          acompanhamento nos primeiros fechamentos. Odoo é onde a gente tem mais estrada.
+        </p>
+        <div class="acoes">
+          <a class="botao" href={`mailto:${EMPRESA.contato}`}>Conversar sobre o seu projeto</a>
+        </div>
+      </section>
+
+      <section class="blocos">
+        <article>
+          <h2>Implantação</h2>
+          <p>
+            Do desenho do processo à virada. Configuração, integrações com o que você já usa,
+            migração de cadastros e saldos, e a equipe treinada no fluxo dela — não num manual
+            genérico.
+          </p>
+        </article>
+
+        <article>
+          <h2>Resgate de projeto</h2>
+          <p>
+            Implantação que empacou tem conserto. Entramos em projeto parado, achamos onde travou,
+            separamos o que dá para salvar do que precisa ser refeito, e colocamos data no que
+            falta.
+          </p>
+        </article>
+
+        <article>
+          <h2>Sustentação</h2>
+          <p>
+            Depois que entra em produção, o sistema continua vivo: ajuste fiscal, relatório novo,
+            processo que mudou. Atendimento por chamado, com prazo combinado e sem contrato que
+            prende.
+          </p>
+        </article>
+
+        <article>
+          <h2>Infraestrutura</h2>
+          <p>
+            Servidor, banco, backup testado, monitoramento e atualização. ERP fora do ar não é
+            problema de TI, é faturamento parado — então a casa fica arrumada desde o começo.
+          </p>
+        </article>
+      </section>
+
+      <section class="jeito">
+        <h2>Como a gente trabalha</h2>
+        <p>
+          Projeto curto, com entrega visível a cada etapa. Nada de seis meses de documento antes de
+          alguém ver o sistema funcionando. A cada quinze dias tem algo rodando para a sua equipe
+          testar, e o que não serve a gente descobre cedo, quando ainda é barato mudar.
+        </p>
+        <p>
+          Quem conversa com você é quem faz. Não há camada de gerente repassando recado para um
+          time que você nunca vê.
+        </p>
+      </section>
+
+      <section class="contato">
+        <h2>Vamos conversar</h2>
+        <p>
+          Escreva contando em que pé está o seu projeto — começando do zero, empacado no meio, ou já
+          rodando e precisando de quem cuide. A resposta vem no mesmo dia útil.
+        </p>
+        <a class="botao" href={`mailto:${EMPRESA.contato}`}>{EMPRESA.contato}</a>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <p>
+        {EMPRESA.razaoSocial} · CNPJ {EMPRESA.cnpj}
+      </p>
+      <p>
+        {EMPRESA.endereco} · {EMPRESA.cidade} ({EMPRESA.estado}) · CEP {EMPRESA.cep}
+      </p>
+    </footer>
+
+    <style is:global>
+      :root {
+        --tinta: #10202a;
+        --tinta-suave: #4b6472;
+        --tinta-fraca: #8aa0ac;
+        --linha: #dfe9ee;
+        --papel: #ffffff;
+        --fundo: #f6fafb;
+        --verde: #0f766e;
+        --azul: #0284c7;
+        --largura: 1000px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--fundo);
+        color: var(--tinta);
+        font-family:
+          ui-sans-serif, -apple-system, "SF Pro Text", "Inter", "Segoe UI", system-ui, sans-serif;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background:
+          radial-gradient(at 0% 0%, rgba(15, 118, 110, 0.14), transparent 55%),
+          radial-gradient(at 100% 8%, rgba(2, 132, 199, 0.12), transparent 55%),
+          linear-gradient(135deg, #ecfeff, #f0fdfa 50%, #eff6ff);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .topo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        max-width: var(--largura);
+        margin: 0 auto;
+        padding: 18px 24px;
+      }
+
+      .marca {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        font-size: 17px;
+        letter-spacing: -0.01em;
+        text-decoration: none;
+      }
+
+      .marca-icone {
+        display: grid;
+        place-items: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 9px;
+        background: linear-gradient(135deg, var(--verde), var(--azul));
+        color: #fff;
+        font-size: 16px;
+      }
+
+      .botao {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 14px 26px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--verde), var(--azul));
+        color: #fff !important;
+        font-weight: 600;
+        font-size: 15.5px;
+        text-decoration: none;
+        box-shadow: 0 10px 24px -10px rgba(2, 132, 199, 0.8);
+      }
+
+      .botao:hover {
+        filter: brightness(1.06);
+      }
+
+      .botao-fino {
+        padding: 9px 18px;
+        font-size: 14px;
+      }
+
+      main {
+        max-width: var(--largura);
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      section {
+        padding: 56px 0;
+      }
+
+      .olho {
+        margin: 0 0 14px;
+        font-size: 12.5px;
+        font-weight: 650;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: var(--tinta-fraca);
+      }
+
+      h1 {
+        margin: 0 0 18px;
+        font-size: clamp(30px, 5.2vw, 52px);
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+        max-width: 18ch;
+      }
+
+      .linha-fina {
+        margin: 0 0 30px;
+        max-width: 60ch;
+        font-size: 17px;
+        color: var(--tinta-suave);
+      }
+
+      .blocos {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+
+      .blocos article {
+        background: var(--papel);
+        border: 1px solid var(--linha);
+        border-radius: 16px;
+        padding: 24px;
+      }
+
+      h2 {
+        margin: 0 0 10px;
+        font-size: 20px;
+        letter-spacing: -0.02em;
+      }
+
+      .blocos p,
+      .jeito p {
+        margin: 0 0 12px;
+        color: var(--tinta-suave);
+        font-size: 15.5px;
+      }
+
+      .jeito {
+        max-width: 62ch;
+      }
+
+      .contato {
+        border-top: 1px solid var(--linha);
+      }
+
+      .contato p {
+        max-width: 58ch;
+        color: var(--tinta-suave);
+        margin: 0 0 22px;
+      }
+
+      .rodape {
+        max-width: var(--largura);
+        margin: 0 auto;
+        padding: 28px 24px 56px;
+        border-top: 1px solid var(--linha);
+        color: var(--tinta-fraca);
+        font-size: 13px;
+      }
+
+      .rodape p {
+        margin: 4px 0;
+      }
+    </style>
+  </body>
+</html>

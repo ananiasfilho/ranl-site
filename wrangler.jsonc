@@ -1,0 +1,8 @@
+{
+  // Site estático servido pelo Workers: sem código de servidor, só os arquivos
+  // que o Astro gera em dist/.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ranl-site",
+  "compatibility_date": "2026-08-19",
+  "assets": { "directory": "./dist" }
+}
