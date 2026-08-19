@@ -1,10 +1,3 @@
----
-const EMPRESA = {
-  razaoSocial: "RANL Serviços Administrativos Ltda",
-  cnpj: "53.176.679/0001-30",
-};
----
-
 <!doctype html>
 <html lang="pt-BR">
   <head>
@@ -32,8 +25,6 @@ const EMPRESA = {
       <p>Site em construção.</p>
     </main>
 
-    <footer>{EMPRESA.razaoSocial} · CNPJ {EMPRESA.cnpj}</footer>
-
     <style is:global>
       * {
         box-sizing: border-box;
@@ -50,7 +41,6 @@ const EMPRESA = {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 44px;
         padding: 32px;
         background: linear-gradient(135deg, #fff6f4, #fffaf8 55%, #fdf7f5);
         color: #241715;
@@ -78,10 +68,6 @@ const EMPRESA = {
         color: #6d5450;
       }
 
-      footer {
-        font-size: 12.5px;
-        color: #a89089;
-      }
     </style>
   </body>
 </html>
